@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Camera</title>
+    <link rel="stylesheet" href="./camera.css" />
+    <script src="./camera.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container_video">
+            <div class="container_camera">
+                <div class="camera_image">
+                    <video id="camera_video" autoplay></video>
+                    <canvas id="camera_canvas"></canvas>
+                    <!-- uncomment to add borderImg -->
+                    <!-- <img src="./images/border.png" alt="border.png" id="borderImg"> -->
+                </div>
+                <img src="./images/cancelBtn.png" alt="cancelBtn" id="cancelBtn">
+                <img src="./images/captureBtn.png" alt="snapBtn" id="snapBtn">
+            </div>
+            <div class="container_input">
+                <input type="text" placeholder="Enter Your First Name" id="inputField" required>
+                <button id="saveBtn">
+                    <img src="./images/saveBtn.png" alt="saveBtn">
+                </button>
+            </div>
+        </div>
+        <div class="container_world hidden">
+            <canvas id="world_canvas"></canvas>
+            <img id="editBtn" src="./images/editBtn.png" alt="editBtn">
+        </div>
+        <img id="downloadBtn" src="./images/downloadBtn.png" alt="downloadBtn">
+    </div>
+
+</body>
+
+</html>

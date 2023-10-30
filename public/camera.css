@@ -1,0 +1,160 @@
+@font-face {
+    font-family: myGoodFont;
+    src: url ("./font/Majestic.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --constainerSize: 536px;
+    --boxSize: 536px;
+    --cameraSize: 512px;
+    --imageSize: 1024px;
+    --imageBoxSize: 1060px;
+    --primary: rgb(240, 240, 13);
+    --secondary: rgb(255, 255, 255);
+}
+
+body {
+    background-color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: var(--constainerSize);
+    height: 100vh;
+    background-color: var(--primary);
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.container_video {
+    /* display: block; */
+    margin: 0 auto;
+    width: var(--boxSize);
+    background-color: var(--secondary);
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+    scale: .65;
+    transform-origin: 50% 100px;
+}
+
+.container_world {
+    /* display: none; */
+    width: var(--boxSize);
+    margin: 0 auto;
+    scale: .5;
+    transform-origin: 170px 30px;
+    transform: rotatez(15deg);
+}
+
+.container_camera {
+    width: var(--cameraSize);
+    height: var(--cameraSize);
+    position: relative;
+    background-color: aqua;
+    margin: 0 auto;
+
+}
+
+.camera_image {
+    width: var(--imageSize);
+    height: var(--imageSize);
+    position: relative;
+    margin-top: 8px;
+    transform: translate(-50%, -50%);
+    scale: .5;
+
+}
+
+#camera_video {
+    background-color: rgba(44, 44, 77, 0.823);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+#camera_canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.container_input {
+    margin-top: 2.5rem;
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_input input {
+    width: 80%;
+    outline: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: rgba(95, 82, 82, 0.251);
+
+}
+
+.container_input button {
+    width: 30%;
+    border: none;
+    background: transparent;
+}
+
+.container_input button img {
+    width: 100%;
+}
+
+#snapBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+}
+
+#cancelBtn {
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    right: 1rem;
+    top: 1rem;
+}
+
+#editBtn {
+    cursor: pointer;
+    position: absolute;
+    width: 60px;
+    left: 410px;
+    top: 6rem;
+}
+
+#downloadBtn {
+    width: 200px;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+
+/* #borderImg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+} */
